@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Enrollment Form</title>
+
+    <style>
+        body { margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #c22d89,#bdc7d0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh  }
+
+        .form-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 800px;   }
+
+        h2 {
+            text-align: center;
+            color: #4e73df;
+            margin-bottom: 20px;
+            letter-spacing: 1px;  }
+
+        table {  width: 100%;border-collapse: collapse;  }
+
+        td {padding: 10px;vertical-align: middle; }
+
+        td:first-child {  font-weight: bold;color: rgb(247, 20, 58); width: 35%; }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        input[type="tel"],
+        select {
+            width: 95%;
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid rgb(213, 78, 247);
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus,select:focus {
+            border-color: rgb(238, 41, 74)
+            box-shadow: 0 0 5px rgba(255, 192, 203, 0.5);
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .button-container {
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 14px;
+            cursor: pointer;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(44, 14, 19);
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #17a673;
+        }
+
+        input[type="reset"] {
+            background-color: #e74a3b;
+            color: white;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #c0392b;
+        }
+
+        .credentials {
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-container">
+
+<h2 style="text-align: center; color: rgb(204, 55, 142); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">ONLINE ENROLLMENT FORM</h2>
+
+<form action="#" method="post">
+
+<table >
+
+<tr>
+    <td>First Name*</td>
+    <td><input type="text" name="firstname" required></td>
+</tr>
+
+<tr>
+    <td>Middle Name</td>
+    <td><input type="text" name="middlename"></td>
+</tr>
+
+<tr>
+    <td >Last Name*</td>
+    <td><input type="text" name="lastname" required></td>
+</tr>
+
+<tr>
+    <td>Birthday*</td>
+    <td><input type="date" type="time" name="birthday" required></td>
+</tr>
+
+<tr>
+    <td>Birthplace*</td>
+    <td><input type="text" name="birthplace" required></td>
+</tr>
+
+<tr>
+    <td>Age*</td>
+    <td><input type="number" name="age" min="1" required></td>
+</tr>
+
+<tr>
+    <td>Year Level*</td>
+    <td>
+        <select name="yearlevel" required>
+            <option value="">Select Year Level</option>
+            <option>1st Year</option>
+            <option>2nd Year</option>
+            <option>3rd Year</option>
+            <option>4th Year</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td>Course*</td>
+    <td>
+        <select name="course" required>
+            <option value="">Select Course</option>
+            <option>ACT (Associate in Computer Technology)</option>
+            <option>BSOA (Business Office Administration)</option>
+            <option>ENTREP (Entrepreneurship)</option>
+            <option>HM (Hospitality Management)</option>
+            <option>CT (Computer Technology)</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td>Citizenship*</td>
+    <td><input type="text" name="citizenship" value="Filipino" required></td>
+</tr>
+
+<tr>
+    <td>Sex*</td>
+    <td>
+        <input type="radio" name="sex" value="Male" required> Male
+        <input type="radio" name="sex" value="Female"> Female
+    </td>
+</tr>
+
+<tr>
+    <td>Civil Status*</td>
+    <td>
+        <select name="civilstatus" required>
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+            <option value="Widowed">Widowed</option>
+            <option value="Separated">Separated</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td>Region*</td>
+    <td><input type="text" name="region" required></td>
+</tr>
+
+<tr>
+    <td>Province*</td>
+    <td><input type="text" name="province" required></td>
+</tr>
+
+<tr>
+    <td>City*</td>
+    <td><input type="text" name="city" required></td>
+</tr>
+
+<tr>
+    <td>Barangay*</td>
+    <td><input type="text" name="barangay" required></td>
+</tr>
+
+<tr>
+    <td>House No./Street*</td>
+    <td><input type="text" name="address" required></td>
+</tr>
+
+<tr>
+    <td>Contact No.*</td>
+    <td><input type="tel" name="contact" pattern="[0-9]{11}" placeholder="09XXXXXXXXX" required></td>
+</tr>
+
+<tr>
+    <td valign="top">Credentials Submitted*</td>
+    <td class="credentials">
+        <input type="checkbox" name="credentials" value="Form 138"> Form-138 (High School Card)<br>
+        <input type="checkbox" name="credentials" value="Form 137"> Form-137<br>
+        <input type="checkbox" name="credentials" value="Birth Certificate"> Birth Certificate<br>
+        <input type="checkbox" name="credentials" value="Good Moral"> Good Moral Certificate<br>
+        <input type="checkbox" name="credentials" value="Transfer"> Certificate of Transfer Credentials<br>
+        <input type="checkbox" name="credentials" value="Transcript"> Transcript of Records<br>
+        <input type="checkbox" name="credentials" value="Summer Permit"> Summer Permit / Permit to Cross Enroll<br>
+        <input type="checkbox" name="credentials" value="Picture"> Picture<br>
+        <input type="checkbox" name="credentials" value="PSA"> PSA / NSO
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2" class="button-container">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear">
+    </td>
+</tr>
+
+</table>
+
+</form>
+
+</div>
+
+</body>
+</html>
